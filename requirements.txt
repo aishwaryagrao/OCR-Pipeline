@@ -1,0 +1,8 @@
+opencv-python
+pytesseract
+easyocr
+mlflow
+torch
+torchvision
+argparse
+unittest
