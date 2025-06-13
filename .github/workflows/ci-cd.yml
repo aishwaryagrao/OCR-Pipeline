@@ -19,7 +19,7 @@ jobs:
         python-version: 3.13.5
 
     - name: Install system packages
-      run: sudo apt-get update && sudo apt-get install -y tesseract-ocr libgl1-mesa-glx libglib2.0-0
+      run: sudo apt-get update && sudo apt-get install -y tesseract-ocr libgl1 libglx-mesa0 libglib2.0-0
 
     - name: Install Python dependencies
       run: |
