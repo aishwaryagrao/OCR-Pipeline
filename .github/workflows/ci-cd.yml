@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.10
+        python-version: 3.13.5
 
     - name: Install system packages
       run: sudo apt-get update && sudo apt-get install -y tesseract-ocr libgl1-mesa-glx libglib2.0-0
