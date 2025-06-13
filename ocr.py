@@ -20,6 +20,7 @@ def run_ocr_easyocr(image_path):
 def main(image_path, engine):
     mlflow.start_run()
     mlflow.log_param("engine", engine)
+    mlflow.log_param("image", image_path)
     # data_dir = "data"
 
     # for fname in os.listdir(data_dir):
@@ -33,7 +34,15 @@ def main(image_path, engine):
         else:
             raise ValueError("Unsupported OCR engine. Use 'pytesseract' or 'easyocr'.")
 
-        mlflow.log_text(text, image_path + ".txt")
+        mlflow.log_text(text, "output.txt")
+
+         # Save and log output text
+        output_path = "output/"+ image_path + ".txt"
+        with open(output_path, "w") as f:
+            f.write(text)
+        mlflow.log_artifact(output_path)
+
+        print("OCR Output:\n", text)
 
     mlflow.end_run()
 

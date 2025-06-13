@@ -17,4 +17,4 @@ COPY . /app
 
 
 # Run the OCR script with default engine (can override with --image and --engine)
-CMD ["python", "ocr.py", "data/569669.jpg", "pytesseract"]
+CMD ["python", "ocr.py", "--image", "data/569669.jpg", "--engine", "pytesseract"]

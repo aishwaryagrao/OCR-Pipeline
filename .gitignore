@@ -2,3 +2,5 @@ mlruns/
 docker-compose.yml
 __pycache__/
 .DS_Store
+output/data/
+output.txt
